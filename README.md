@@ -1,2 +1,2 @@
 # HospitalAppointment
-Hospital online appointment web FE study case.
+Hospital online appointment web FE demo.
