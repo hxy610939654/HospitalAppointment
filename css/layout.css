@@ -1,7 +1,19 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+p{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+a{
+    text-decoration:none;
+}
+select,input{
+    border: none;
+    outline: none;
 }
 .warp{
     width:1000px;
@@ -43,6 +55,9 @@
     height: 146px;
     background-color: #eee;
 }
+.banner_search{
+    height: 255px;
+}
 .banner_help{
     background-color: #ccc;
     margin-top: 12px;
@@ -52,21 +67,18 @@
     float: left;
     width: 742px;
     height: 490px;
-    background-color: #eee;
 }
 .content_news,
 .content_announcement{
     float: right;
     width: 248px;
     height: 236px;
-    border: 1px solid #ccc;
 }
 .content_announcement{
     margin-top: 12px;
-    border-color: #f00;
 }
 .footer{
-    height: 132px;
+    height: 70px;
     padding: 25px 0;
     background-color: #eceef2;
 }
