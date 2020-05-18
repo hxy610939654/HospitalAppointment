@@ -1,0 +1,52 @@
+.ui_search{
+    background: url(../img/ui-search.jpg) center no-repeat;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+}
+.ui_search_selected{
+    width: 70px;
+    height: 38px;
+    line-height: 38px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 14px;
+}
+.ui_search_selectList{
+    display: none;
+    position: absolute;
+    width: 67px;
+    line-height: 24px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+    left: 2px;
+    top: 36px;
+    z-index: 2;
+}
+.ui_search_selectList_item{
+    display: block;
+    color: #A5a2a2;
+    text-align: center;
+}
+.ui_search_selectList_item:hover{
+    background-color: #eee;
+}
+.ui_search_input{
+    width: 208px;
+    height: 26px;
+    position: absolute;
+    top: 5px;
+    left: 73px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #A5a2a2;
+}
+.ui_search_submit{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 40px;
+    height: 36px;
+}
