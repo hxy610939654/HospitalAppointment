@@ -150,3 +150,66 @@
     line-height: 40px;
     text-align: center;
 }
+
+.ui_slider{
+    width: 544px;
+    height: 414px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.ui_slider_warp{
+    width: 9999px;
+    height: 414px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all .5s;
+}
+.ui_slider_warp .item{
+    display: block;
+    float: left;
+
+    width: 544px;
+    height: 414px;
+}
+.ui_slider_arrow{
+    width: 544px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+.ui_slider_arrow .item{
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    background:url(../img/ui-slider-arrow.png) no-repeat;
+}
+.ui_slider_arrow .left{
+    left: 0;
+}
+.ui_slider_arrow .right{
+    right: 0;
+    background-position: -40px 0;
+}
+.ui_slider_points{
+    width: 100%;
+    height: 12px;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+}
+
+.ui_slider_points .item{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/ui-slider-process.png) no-repeat;
+}
+.ui_slider_points .item_active,
+.ui_slider_points .item:hover{
+    background-position: -23px 0;
+}
