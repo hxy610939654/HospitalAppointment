@@ -176,7 +176,7 @@
     height: 34px;
     background-color: #f1f1f1;
 }
-.content_tab .caption .item{
+.content_tab .caption .caption_item{
     display: inline-block;
     text-align: center;
     width: 112px;
@@ -185,7 +185,7 @@
     font-size: 14px;
     color: #00b3ea;
 }
-.content_tab .caption .item_active{
+.content_tab .caption .active{
     background-color: #00b3ea;
     color: #fff;
 }
@@ -207,7 +207,7 @@
     color: #4c4948;
     float: left;
 }
-.content_tab .caption_item_active{
+.content_tab .active{
     background-color: #00b3ea;
     color: #fff;
 }

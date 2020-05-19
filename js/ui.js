@@ -15,6 +15,23 @@ $.fn.UiSearch = function(){
     });
 }
 
+$.fn.UiTab = function(header,content){
+    var ui = $(this),
+        tabs = $(header,ui),
+        items = $(content,ui);
+        tabs.on('click',function(){
+            var index = $(this).index();
+            tabs.removeClass('active').eq(index).addClass('active');
+            items.hide().eq(index).show();
+        })
+
+
+
+
+}
+
 $(function(){
     $('.ui_search').UiSearch();
+    $('.content_tab').UiTab('.caption > .caption_item','.block > .item');
+    $('.district').UiTab('.district_caption > .district_caption_item','.hospitalList > .list');
 })
