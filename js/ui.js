@@ -23,15 +23,34 @@ $.fn.UiTab = function(header,content){
             var index = $(this).index();
             tabs.removeClass('active').eq(index).addClass('active');
             items.hide().eq(index).show();
-        })
+        });
+}
 
+$.fn.UiBackToTop = function(){
+    var ui = $(this),
+        el = $('<a class="ui_backToTop" href="#8"></a>');
+    ui.append(el);
 
+    var windowHeight = $(window).height();
 
-
+    $(window).on('scroll',function(){
+        var top = $('body,html').scrollTop();
+        if(top > windowHeight){
+            el.show();
+        }else {
+            el.hide();
+        }
+    })
+    el.on('click',function(){
+        $('body,html').stop().animate({scrollTop:0}, 500);
+    })
 }
 
 $(function(){
     $('.ui_search').UiSearch();
+    
     $('.content_tab').UiTab('.caption > .caption_item','.block > .item');
     $('.district').UiTab('.district_caption > .district_caption_item','.hospitalList > .list');
+
+    $('body').UiBackToTop();
 })

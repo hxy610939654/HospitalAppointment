@@ -129,3 +129,24 @@
     color: #ccc;
     padding-left: 8px;
 }
+
+.ui_backToTop{
+    display: none;
+    position: fixed;
+    right: 2px;
+    bottom: 2px;
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: rgba(102,102,102,.8) url(../img/icon-go-up.png) center no-repeat;
+}
+.ui_backToTop:hover{
+    background: rgba(102,102,102,.8);
+}
+.ui_backToTop:hover:after{
+    content: 'Top';
+    display:block;
+    line-height: 40px;
+    text-align: center;
+}
