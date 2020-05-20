@@ -46,6 +46,72 @@ $.fn.UiBackToTop = function(){
     })
 }
 
+$.fn.UiSlider = function(){
+    var ui = $(this),
+        btn_prev = $('.ui_slider_arrow .left',ui),
+        btn_next = $('.ui_slider_arrow .right',ui),
+        items = $('.ui_slider_warp .item',ui),
+        points = $('.ui_slider_points .item',ui),
+        warp = $('.ui_slider_warp',ui),
+        arrow = $('.ui_slider_arrow',ui);
+    var current = 0,
+        size = items.length,
+        width = items.eq(0).width(),
+        enableAuto = true;
+    arrow
+    .on('mouseover',function(){
+        enableAuto = false;
+    })
+    .on('mouseout',function(){
+        enableAuto = true;
+    })
+    warp
+    .on('mouseover',function(){
+        enableAuto = false;
+    })
+    .on('mouseout',function(){
+        enableAuto = true;
+    })
+
+    warp
+    .on('move_to',function(event,index){
+        warp.css('left',index*width*-1);
+        points.removeClass('item_active').eq(index).addClass('item_active');
+    })
+    .on('move_prev',function(){
+        if(current<=0){
+            current = size;
+        }
+        current = current -1;
+        warp.triggerHandler('move_to',current);
+    })
+    .on('move_next',function(){
+        if(current>=size-1){
+            current = -1;
+        }
+        current = current +1;
+        warp.triggerHandler('move_to',current);
+        console.log(items);
+    })
+    .on('auto_move',function(){
+        setInterval(function(){
+        enableAuto && warp.triggerHandler('move_next');
+        },2000);
+    })
+    .triggerHandler('auto_move');
+
+    btn_prev.on('click',function(){
+        warp.triggerHandler('move_prev');
+    })
+    btn_next.on('click',function(){
+        warp.triggerHandler('move_next');
+    })
+    points.on('click',function(){
+        var index = $(this).index();
+        warp.triggerHandler('move_to',index);
+    })
+}
+
 $(function(){
     $('.ui_search').UiSearch();
     
@@ -53,4 +119,7 @@ $(function(){
     $('.district').UiTab('.district_caption > .district_caption_item','.hospitalList > .list');
 
     $('body').UiBackToTop();
+
+    $('.ui_slider').UiSlider();
+
 })
