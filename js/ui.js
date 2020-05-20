@@ -91,7 +91,6 @@ $.fn.UiSlider = function(){
         }
         current = current +1;
         warp.triggerHandler('move_to',current);
-        console.log(items);
     })
     .on('auto_move',function(){
         setInterval(function(){
@@ -112,6 +111,19 @@ $.fn.UiSlider = function(){
     })
 }
 
+$.fn.UiCascading = function(){
+    var ui = $(this),
+        selects = $('select',ui);
+
+        select
+        .on('change',function(){
+            var val = $(this).val(),
+                index = selects.index(this);
+        })
+        .on('reloadOptions',function(){})
+
+}
+
 $(function(){
     $('.ui_search').UiSearch();
     
@@ -121,5 +133,5 @@ $(function(){
     $('body').UiBackToTop();
 
     $('.ui_slider').UiSlider();
-
+    $('.ui_casecading').UiCascading();
 })
