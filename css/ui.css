@@ -155,7 +155,7 @@
     width: 544px;
     height: 414px;
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 .ui_slider_warp{
     width: 9999px;

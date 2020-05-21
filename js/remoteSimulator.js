@@ -37,9 +37,9 @@ storage.department = [
 
 ]
 
-var AjaxRemoteGetData = {};
+var RemoteGetData = {};
 
-AjaxRemoteGetData.getDistinctArea = function() {
+RemoteGetData.getDistinctArea = function() {
 	
 	console.log('远程数据获取','getDistinctArea');
 
@@ -56,7 +56,7 @@ AjaxRemoteGetData.getDistinctArea = function() {
 	console.log('结果',arr);
 	return arr;
 }
-AjaxRemoteGetData.getLeveByArea  = function( area ){
+RemoteGetData.getLeveByArea  = function( area ){
 	console.log('远程数据获取','getLeveByArea','arguments:',arguments);
 	
 	var map = {};
@@ -76,7 +76,7 @@ AjaxRemoteGetData.getLeveByArea  = function( area ){
 	console.log('结果',arr);
 	return arr;
 }
-AjaxRemoteGetData.getNameByAreaAndLevel = function( area , level ){
+RemoteGetData.getNameByAreaAndLevel = function( area , level ){
 	console.log('远程数据获取','getNameByAreaAndLevel','arguments:',arguments);
 	var map = {};
 	var arr = ['医院名称'];
@@ -96,7 +96,7 @@ AjaxRemoteGetData.getNameByAreaAndLevel = function( area , level ){
 	console.log('结果',arr);
 	return arr;
 }
-AjaxRemoteGetData.getDepartmentArrByHospitalName = function( area,level,hospitalName ){
+RemoteGetData.getDepartmentArrByHospitalName = function( area,level,hospitalName ){
 	console.log('远程数据获取','getDepartmentArrByHospitalName','arguments:',arguments);
 	var map = {};
 	var arr = ['科室名称'];
@@ -116,7 +116,7 @@ AjaxRemoteGetData.getDepartmentArrByHospitalName = function( area,level,hospital
 	return arr;
 }
 
-AjaxRemoteGetData.getDistinctType=function(){
+RemoteGetData.getDistinctType=function(){
 	console.log('远程数据获取','getDistinctType');
 
 	var map = {};
@@ -132,7 +132,7 @@ AjaxRemoteGetData.getDistinctType=function(){
 	console.log('结果',arr);
 	return arr;
 }
-AjaxRemoteGetData.getDistinctLevel=function(){
+RemoteGetData.getDistinctLevel=function(){
 	console.log('远程数据获取','getDistinctLevel');
 
 	var map = {};
@@ -148,7 +148,7 @@ AjaxRemoteGetData.getDistinctLevel=function(){
 	console.log('结果',arr);
 	return arr;
 }
-AjaxRemoteGetData.getHospitalArrByFilter=function(type,level,area){
+RemoteGetData.getHospitalArrByFilter=function(type,level,area){
 	console.log('远程数据获取','getHospitalArrByFilter','arguments:',arguments);
 	var map = {};
 	var arr = ['医院列表'];

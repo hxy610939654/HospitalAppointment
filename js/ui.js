@@ -115,13 +115,23 @@ $.fn.UiCascading = function(){
     var ui = $(this),
         selects = $('select',ui);
 
-        select
+        selects
         .on('change',function(){
             var val = $(this).val(),
                 index = selects.index(this);
-        })
-        .on('reloadOptions',function(){})
 
+                ui.find('select:gt('+ (indext+1) +')')
+                    .attr('data-where','')
+                    .triggerHandler('reloadOptions');
+                console.log();
+
+        })
+        .on('reloadOptions',function(){
+            var method = $(this).attr('data-where');
+                data = RemoteGetData[method]();
+                console.log(method);
+        })
+        selects.eq(0).triggerHandler('reloadOptions');
 }
 
 $(function(){
