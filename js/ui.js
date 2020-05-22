@@ -118,18 +118,35 @@ $.fn.UiCascading = function(){
         selects
         .on('change',function(){
             var val = $(this).val(),
-                index = selects.index(this);
+                index = selects.index(this),
+                where = $(this).attr('data-where');
+                where = where ? where.split(',') : [];
+                where.push($(this).val());
 
-                ui.find('select:gt('+ (indext+1) +')')
-                    .attr('data-where','')
-                    .triggerHandler('reloadOptions');
-                console.log();
+                selects.eq(index+1)
+                .attr('data-where', where.join(','))
+                .triggerHandler('reloadOptions'); 
+
+
+                ui.find('select:gt('+ (index+1) +')').each(function() {
+                $(this)
+                .attr('data-where','')
+                .triggerHandler('reloadOptions'); 
+                })
+                    
 
         })
         .on('reloadOptions',function(){
-            var method = $(this).attr('data-where');
-                data = RemoteGetData[method]();
-                console.log(method);
+            var method = $(this).attr('data-search'),
+                args = $(this).attr('data-where').split(','),
+                data = RemoteGetData[method].apply(this,args),
+                selects = $(this);
+            selects.empty();
+            $.each(data,function(index, el) {
+                var item = $('<option value="'+el+'">'+el+'</option>');
+                selects.append(item);
+            });
+
         })
         selects.eq(0).triggerHandler('reloadOptions');
 }
