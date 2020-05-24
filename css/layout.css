@@ -16,7 +16,12 @@ select,input{
     outline: none;
 }
 .warp{
-    width:1000px;
+    width:1060px;
+    margin: 0 auto;
+    position: relative;
+}
+.page_item{
+    width:1060px;
     margin: 0 auto;
     position: relative;
 }
@@ -36,48 +41,50 @@ select,input{
     height: 36px;
     background-color: #60bff2;
 }
-.banner{
+.banner_home{
     width: 802px;
     margin: 0 auto;
     height: 414px;
-    padding: 9px 0 0 198px;
+    padding: 9px 0 0 260px;
 }
-.banner_slider{
+.banner_home_slider{
     float: left;
     width: 544px;
     height: 414px;
     background-color: #8edff3;
 }
-.banner_search,
-.banner_help{
+.banner_home_search,
+.banner_home_help{
     float: right;
     width: 250px;
     height: 146px;
     background-color: #eee;
 }
-.banner_search{
+.banner_home_search{
     height: 255px;
 }
-.banner_help{
+.banner_home_help{
     background-color: #ccc;
     margin-top: 12px;
 }
-.content{padding: 10px 0 38px 0;}
-.content_tab{
+.content_home{padding: 10px 0 38px 0;}
+.content_home_tab{
     float: left;
     width: 742px;
     height: 490px;
 }
-.content_news,
-.content_announcement{
+.content_home_news,
+.content_home_announcement{
     float: right;
     width: 248px;
     height: 236px;
 }
-.content_announcement{
+.content_home_announcement{
     margin-top: 12px;
 }
 .footer{
+    bottom: 0;
+    width: 100%;
     height: 70px;
     padding: 25px 0;
     background-color: #eceef2;

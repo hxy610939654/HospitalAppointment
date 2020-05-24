@@ -48,12 +48,12 @@ $.fn.UiBackToTop = function(){
 
 $.fn.UiSlider = function(){
     var ui = $(this),
-        btn_prev = $('.ui_slider_arrow .left',ui),
-        btn_next = $('.ui_slider_arrow .right',ui),
-        items = $('.ui_slider_warp .item',ui),
-        points = $('.ui_slider_points .item',ui),
-        warp = $('.ui_slider_warp',ui),
-        arrow = $('.ui_slider_arrow',ui);
+        btn_prev = $('.ui_home_slider_arrow .left',ui),
+        btn_next = $('.ui_home_slider_arrow .right',ui),
+        items = $('.ui_home_slider_warp .item',ui),
+        points = $('.ui_home_slider_points .item',ui),
+        warp = $('.ui_home_slider_warp',ui),
+        arrow = $('.ui_home_slider_arrow',ui);
     var current = 0,
         size = items.length,
         width = items.eq(0).width(),
@@ -114,7 +114,7 @@ $.fn.UiSlider = function(){
 $.fn.UiCascading = function(){
     var ui = $(this),
         selects = $('select',ui);
-
+        console.log(this);
         selects
         .on('change',function(){
             var val = $(this).val(),
@@ -149,16 +149,20 @@ $.fn.UiCascading = function(){
 
         })
         selects.eq(0).triggerHandler('reloadOptions');
+
 }
+
+
 
 $(function(){
     $('.ui_search').UiSearch();
     
-    $('.content_tab').UiTab('.caption > .caption_item','.block > .item');
+    $('.page').UiTab('.nav_caption','.page_item');
+    $('.content_home_tab').UiTab('.caption > .caption_item','.block > .item');
     $('.district').UiTab('.district_caption > .district_caption_item','.hospitalList > .list');
 
     $('body').UiBackToTop();
 
-    $('.ui_slider').UiSlider();
+    $('.ui_home_slider').UiSlider();
     $('.ui_casecading').UiCascading();
 })

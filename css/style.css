@@ -34,45 +34,44 @@
 /*    background-color: orange;*/
 }
 
+.nav .active{background-color: #1fa4f0;}
 .nav .link{
     display: inline-block;
     float: left;
-    padding-left: 30px;
+    width: 170px;
     line-height: 36px;
     color: #fff;
     font-size: 16px;
     min-width: 80px;
     text-align: center;
 }
-.nav a:hover{
+.nav .link:hover{
     color: #d7f3ff;
+    background-color: #1fa4f0;
 }
 .nav .menu{
-    width: 130px;
-    padding-right: 30px;
-    background-color: #1fa4f0;
-    position: relative;
+    width: 170px;
+    display: block;
 }
-.nav .menu .menu_list{
+.page_item .menu_list{
+    display: block;
     background-color: #1fa4f0;
-    width: 100%;
+    width: 170px;
     height: 423px;
     position: absolute;
-    left: 0;
-    top: 36px;
 }
 
-.banner_search{
+.banner_home_search{
     background-color: #eee;
 }
-.banner_help .caption,
-.banner_search .caption{
+.banner_home_help .caption,
+.banner_home_search .caption{
     height: 22px;
     padding: 15px 0;
     text-align: center;
 }
-.banner_help .caption .text,
-.banner_search .caption .text{
+.banner_home_help .caption .text,
+.banner_home_search .caption .text{
     display: inline-block;
     height: 22px;
     line-height: 22px;
@@ -81,14 +80,14 @@
     color: #fec009;
     background: url(../img/icon-help.png) no-repeat 0 0;
 }
-.banner_search .form{
+.banner_home_search .form{
     height: 150px;
 }
-.banner_search .form .line{
+.banner_home_search .form .line{
     padding-bottom: 9px;
     text-align: center;
 }
-.banner_search .form .line .select{
+.banner_home_search .form .line .select{
     width: 170px;
     font-size: 12px;
     z-index: 0;
@@ -99,11 +98,11 @@
     padding: 2px 0;
     color: #666;
 }
-.banner_search .submit{
+.banner_home_search .submit{
     height: 33px;
     text-align: center;
 }
-.banner_search .submit .button{
+.banner_home_search .submit .button{
     width: 108px;
     height: 33px;
     background-color: #fecd09;
@@ -112,15 +111,15 @@
     border-radius: 5px;
 }
 
-.banner_help{
+.banner_home_help{
     background-color: #eee;
 }
-.banner_help .caption .text{
+.banner_home_help .caption .text{
     color: #00b3ea;
     background-position: 0 -23px;
 }
 
-.banner_help .link{
+.banner_home_help .link{
     color: #00b3ea;
     display: inline-block;
     width: 86px;
@@ -131,13 +130,13 @@
     padding: 0 0 8px 26px;
 }
 
-.content_news,
-.content_announcement{
+.content_home_news,
+.content_home_announcement{
     background-color: #fff;
     border: 1px solid #ddd;
 }
-.content_announcement .caption,
-.content_news .caption{
+.content_home_announcement .caption,
+.content_home_news .caption{
     height: 38px;
     line-height: 38px;
     background-color: #ddd;
@@ -145,38 +144,38 @@
     color: #fec409;
     font-size: 15px;
 }
-.content_announcement .more,
-.content_news .more{
+.content_home_announcement .more,
+.content_home_news .more{
     float: right;
     padding-right: 22px;
     font-size: 12px;
     color: #868686;
 }
-.content_announcement .caption{
+.content_home_announcement .caption{
     color: #5bb8e8;
 }
-.content_announcement .list,
-.content_news .list{
+.content_home_announcement .list,
+.content_home_news .list{
     padding: 8px 20px 13px 35px;
     font-size: 12px;
     line-height: 29px;
     background: url(../img/list-yellow.jpg) 17px 15px no-repeat;
 }
-.content_announcement .list .link,
-.content_news .list .link{
+.content_home_announcement .list .link,
+.content_home_news .list .link{
     display: inline-block;
     color: #969696;
 }
-.content_announcement .list{
+.content_home_announcement .list{
     background: url(../img/list-blue.jpg) 17px 15px no-repeat;
 }
 
-.content_tab .caption{
+.content_home_tab .caption{
     width: 100%;
     height: 34px;
     background-color: #f1f1f1;
 }
-.content_tab .caption .caption_item{
+.content_home_tab .caption .caption_item{
     display: inline-block;
     text-align: center;
     width: 112px;
@@ -185,45 +184,45 @@
     font-size: 14px;
     color: #00b3ea;
 }
-.content_tab .caption .active{
+.content_home_tab .caption .active{
     background-color: #00b3ea;
     color: #fff;
 }
 
-.content_tab .district{
+.content_home_tab .district{
     border: 1px solid #eee;
     height: 452px;
 }
-.content_tab .district_caption{
+.content_home_tab .district_caption{
     height: 26px;
     line-height: 26px;
-    padding: 8px;
+    padding: 8px 8px 8px 0;
     border-bottom: 1px solid #eee;
 }
-.content_tab .district_caption_item{
+.content_home_tab .district_caption_item{
     display: block;
     padding: 0 10px;
     font-size: 12px;
     color: #4c4948;
     float: left;
 }
-.content_tab .active{
+.content_home_tab .active{
     background-color: #00b3ea;
     color: #fff;
 }
 
-.content_tab .hospitalList{
+.content_home_tab .hospitalList{
     padding: 16px 12px;
 }
-.content_tab .hospitalList .listMore{
+.content_home_tab .hospitalList .listMore{
     display: block;
     line-height: 55px;
     text-align: center;
     color: #5084c4;
     font-size: 14px;
 }
-.content_tab .hospitalBlockList{}
-.content_tab .hospitalBlockList .hospitalBlockList_item{
+.content_home_tab .hospitalBlockList{}
+.content_home_tab .hospitalBlockList .hospitalBlockList_item{
     float: left;
     width: 216px;
     height: 102px;
@@ -231,32 +230,32 @@
     position: relative;
     font-size: 12px;
 }
-.content_tab .hospitalBlockList .hospitalBlockList_item img{
+.content_home_tab .hospitalBlockList .hospitalBlockList_item img{
     width: 110px;
     height: 98px;
     position: absolute;
     left: 0;
     top: 0;
 }
-.content_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_name{
+.content_home_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_name{
     color: #036eb7;
     font-size: 14px;
     line-height: 21px;
     padding-top: 10px;
 }
-.content_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_level{
+.content_home_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_level{
     float: right;
     font-size: 12px;
     color: #979797;
 }
-.content_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_tel,
-.content_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_address{
+.content_home_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_tel,
+.content_home_tab .hospitalList .hospitalBlockList .hospitalBlockList_item_address{
     line-height: 18px;
     padding-bottom: 4px;
     color: #666;
 }
 
-.content_tab .hospitalList .hospitalTextList_item{
+.content_home_tab .hospitalList .hospitalTextList_item{
     display: block;
     width: 351px;
     height: 27px;
@@ -266,10 +265,10 @@
     float: left;
     border-bottom: 1px dashed #dcdddd;
 }
-.content_tab .hospitalList .hospitalTextList_level{
+.content_home_tab .hospitalList .hospitalTextList_level{
     float: right;
 }
-.content_tab .hospitalList .hospitalTextList_item:nth-child(2n){
+.content_home_tab .hospitalList .hospitalTextList_item:nth-child(2n){
     margin-left: 13px;
 }
 .footer{
